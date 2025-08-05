@@ -1,0 +1,292 @@
+/* Estilos personalizados para la Agenda de Contactos */
+
+/* Variables CSS para temas */
+:root {
+  --primary-color: #007bff;
+  --success-color: #28a745;
+  --info-color: #17a2b8;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --secondary-color: #6c757d;
+  --dark-color: #343a40;
+  --light-color: #f8f9fa;
+}
+
+/* Estilos globales */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Animación para los contactos nuevos */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicar animación a las tarjetas */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: slideIn 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los avatares circulares */
+.rounded-circle {
+  transition: transform 0.2s ease;
+}
+
+.rounded-circle:hover {
+  transform: scale(1.05);
+}
+
+/* Botones con efectos hover */
+.btn {
+  transition: all 0.2s ease;
+  border-radius: 0.375rem;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Estilo para las tarjetas de contacto */
+.contact-info {
+  font-size: 0.9rem;
+}
+
+.contact-info i {
+  width: 20px;
+  text-align: center;
+}
+
+/* Filtros de letras responsive */
+.btn-sm {
+  font-size: 0.8rem;
+  min-width: 35px;
+}
+
+/* Estilo para el navbar */
+.navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+}
+
+/* Estilos para el modo oscuro */
+.bg-dark {
+  background-color: #1a1a1a !important;
+}
+
+.bg-dark .card {
+  background-color: #2d2d2d !important;
+  border-color: #404040 !important;
+}
+
+.bg-dark .form-control {
+  background-color: #2d2d2d;
+  border-color: #404040;
+  color: #fff;
+}
+
+.bg-dark .form-control:focus {
+  background-color: #2d2d2d;
+  border-color: #007bff;
+  color: #fff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.bg-dark .form-select {
+  background-color: #2d2d2d;
+  border-color: #404040;
+  color: #fff;
+}
+
+.bg-dark .input-group-text {
+  background-color: #2d2d2d;
+  border-color: #404040;
+  color: #fff;
+}
+
+.bg-dark .modal-content {
+  background-color: #2d2d2d;
+  color: #fff;
+}
+
+.bg-dark .alert-warning {
+  background-color: #664d03;
+  border-color: #815a00;
+  color: #ffecb5;
+}
+
+/* Animación para los contactos nuevos */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Las tarjetas ya tienen sus estilos arriba */
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .btn-sm {
+    font-size: 0.75rem;
+    min-width: 30px;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .card-body {
+    padding: 1rem 0.75rem;
+  }
+
+  .contact-info {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .d-flex.gap-1 {
+    flex-wrap: wrap;
+  }
+
+  .btn-sm {
+    margin-bottom: 0.25rem;
+  }
+
+  .flex-fill {
+    min-width: 100px;
+  }
+}
+
+/* Estilos para formularios */
+.form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.is-invalid {
+  border-color: #dc3545;
+}
+
+.invalid-feedback {
+  display: block;
+  font-size: 0.875rem;
+  color: #dc3545;
+}
+
+/* Estilos para iconos */
+.fas,
+.far {
+  font-size: inherit;
+}
+
+/* Loader/Spinner (si se necesita) */
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Estilo para badges */
+.badge {
+  font-size: 0.75em;
+  font-weight: 500;
+}
+
+/* Scrollbar personalizada para modo oscuro */
+.bg-dark::-webkit-scrollbar {
+  width: 8px;
+}
+
+.bg-dark::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+.bg-dark::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+.bg-dark::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+/* Efectos de transición para el cambio de tema */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Estilo para enlaces */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Estilo para el footer */
+footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.bg-dark footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mejoras de accesibilidad */
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+}
+
+/* Skip to content para accesibilidad */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
