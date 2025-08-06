@@ -275,18 +275,21 @@ footer {
   outline: none;
 }
 
-/* Skip to content para accesibilidad */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  text-decoration: none;
-  z-index: 1000;
+/* Labels en modo oscuro */
+.bg-dark .form-label,
+.bg-dark label.form-label {
+  color: #fff !important;
 }
 
-.skip-link:focus {
-  top: 6px;
+/* Footer y textos secundarios en modo oscuro */
+.bg-dark .text-muted,
+.bg-dark small,
+.bg-dark .form-text {
+  color: #e0e0e0 !important;
+}
+
+/* Placeholder blanco en modo oscuro */
+.bg-dark ::placeholder {
+  color: #e0e0e0 !important;
+  opacity: 1;
 }

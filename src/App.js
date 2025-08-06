@@ -223,10 +223,7 @@ function App() {
         {/* Footer */}
         <footer className="text-center mt-5 py-4">
           <div className="text-muted">
-            <small>
-              <i className="fas fa-heart text-danger me-1"></i> Agenda de
-              Contactos - Proyecto Final React JS
-            </small>
+            <small> Agenda de Contactos - Proyecto Final React JS</small>
           </div>
         </footer>
       </div>

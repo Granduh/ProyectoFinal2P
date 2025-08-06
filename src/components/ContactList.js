@@ -100,35 +100,24 @@ const ContactList = ({ contacts, onEdit, onDelete, darkMode }) => {
                 </div>
               </div>
 
-              {/* Enlaces de contacto rápido */}
-              <div className="d-flex gap-1 mt-2">
-                <a
-                  href={`mailto:${contact.email}`}
-                  className="btn btn-sm btn-outline-secondary flex-fill"
-                  title="Enviar email"
+              {/* Botones de acción */}
+              <div className="d-flex gap-2 mt-auto">
+                <button
+                  className="btn btn-outline-primary btn-sm flex-fill"
+                  onClick={() => onEdit(contact)}
+                  title="Editar contacto"
                 >
-                  <i className="fas fa-envelope"></i>
-                </a>
-
-                <a
-                  href={`tel:${contact.phone}`}
-                  className="btn btn-sm btn-outline-secondary flex-fill"
-                  title="Llamar"
+                  <i className="fas fa-edit me-1"></i>
+                  Editar
+                </button>
+                <button
+                  className="btn btn-outline-danger btn-sm flex-fill"
+                  onClick={() => onDelete(contact)}
+                  title="Eliminar contacto"
                 >
-                  <i className="fas fa-phone"></i>
-                </a>
-
-                <a
-                  href={`https://maps.google.com?q=${encodeURIComponent(
-                    contact.address
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-sm btn-outline-secondary flex-fill"
-                  title="Ver en mapa"
-                >
-                  <i className="fas fa-map"></i>
-                </a>
+                  <i className="fas fa-trash me-1"></i>
+                  Eliminar
+                </button>
               </div>
             </div>
           </div>
